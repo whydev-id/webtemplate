@@ -1,0 +1,14 @@
+# Ignore IDE and editor files
+/.idea/
+/.vscode/
+/.DS_Store
+
+# Ignore operating system files
+/Thumbs.db
+/.AppleDouble
+/.LSOverride
+
+# Ignore other files
+/config.json
+/package-lock.json
+/yarn.lock
