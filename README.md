@@ -26,9 +26,9 @@ The website is structured into the following directories:
 * `/assets`: Contains all assets used for the website
 	+ `/css`: Stylesheets for layout and design
 	+ `/js`: JavaScript files for interactive elements
-	+ `/img`: Image assets used for the website
+	+ `/images`: Image assets used for the website
 	+ `/fonts`: Font files used in the website
-	+ `/sass`: Sass files for development styling
+	+ `/scss`: SCSS files for development styling
 
 ## Prerequisites:
 - Node.js and npm (or yarn)
