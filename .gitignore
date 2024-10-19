@@ -1,7 +1,7 @@
 # Ignore IDE and editor files
 /.idea/
 /.vscode/
-/.DS_Store
+.DS_Store
 
 # Ignore operating system files
 /Thumbs.db
