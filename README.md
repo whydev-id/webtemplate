@@ -29,4 +29,17 @@ The website is structured into the following directories:
 	+ `/img`: Image assets used for the website
 	+ `/fonts`: Font files used in the website
 	+ `/sass`: Sass files for development styling
-	+ `/vendor`: Third-party libraries or assets
+
+## Prerequisites:
+- Node.js and npm (or yarn)
+- Sass
+
+## Steps:
+- Install dependencies `npm install`
+- Compile SASS `npm run compile-scss`
+- Start the development server `npm run start`
+- Access your application, open your web browser and navigate to http://localhost:8080.
+
+### Explanation:
+- The compile-scss script compiles SASS files into compressed CSS.
+- The start script starts a simple HTTP server for serving your files.
