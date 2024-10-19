@@ -1,0 +1,111 @@
+.block-porto {
+	padding: 20px 40px;
+	display: block;
+	text-decoration: none;
+	color: $white-1;
+	border-bottom: 3px solid darken($black-blue-1, 10%);
+	margin-left: -40px;
+	margin-right: -40px;
+	@include transition(all .2s cubic-bezier(0.88, 0.37, 0, 0.72));
+
+	&:first-child {
+		border-top: 3px solid darken($black-blue-1, 10%);
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: darken($black-blue-1, 20%);
+		border-color: darken($black-blue-1, 20%);
+		opacity: 1;
+	}
+
+	&:hover .porto-title,
+	&:active .porto-title,
+	&:focus .porto-title {
+		color: $red-1;
+
+		&::before {
+			opacity: 1;
+			left: 0px;
+		}
+	}
+
+	&:hover .read-more,
+	&:active .read-more,
+	&:focus .read-more {
+		&::before {
+			background-color: $red-1;
+			color: $white-1;
+		}
+
+		span {
+			color: $red-1;
+			left: 0px;
+			opacity: 1;
+		}
+	}
+}
+
+.porto-title {
+	font-family: $font-2;
+	font-size: 15px;
+	line-height: 1.2em;
+	margin-bottom: 5px;
+	width: auto;
+	display: inline-block;
+
+	&::before {
+		content: "";
+		height: 2px;
+		display: block;
+		background-color: $red-1;
+		position: relative;
+		bottom: -10px;
+		left: -14px;
+		margin: 0px -15px 0px;
+		opacity: 0;
+		@include transition((opacity .4s, left .4s cubic-bezier(0.93, 0.05, 0, 0.8)));
+	}
+}
+
+.small-desc {
+	margin: 0px 0px 15px;
+}
+
+.read-more {
+	display: table;
+
+	&::before {
+		@include transition(all .5s ease-in-out);
+		content: "● ● ●";
+		color: $red-1;
+		font-weight: 600;
+		font-size: 10px;
+		text-align: center;
+		padding: 1px 15px 1px;
+		display: block;
+	}
+
+	span {
+		@include transition((opacity .4s, left .2s cubic-bezier(0.93, 0.05, 0.82, 1.06)));
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 10px;
+		left: -40px;
+		opacity: 0;
+		font-size: 12px;
+	}
+}
+
+@include responsive (medium) {
+	.porto-title {
+		font-size: 24px;
+
+		&::before {
+			height: 4px;
+			bottom: -16px;
+		}
+	}
+}

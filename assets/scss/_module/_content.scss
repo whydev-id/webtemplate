@@ -1,0 +1,156 @@
+.main-content {
+	margin: 20px 0px 0px;
+}
+
+.info-content {
+	padding: 30px 40px 20px 40px;
+	margin: 0px -40px 0px -40px;
+
+	&.block-divider {
+		border-bottom: 3px solid darken($black-blue-1, 10%);
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+.title-content {
+	font-family: $font-2;
+	line-height: 1.2em;
+	font-size: 18px;
+
+	&.divider {
+		&::after {
+			content: "";
+			display: block;
+			width: 80px;
+			height: 4px;
+			margin-top: 15px;
+			background-color: $red-1;
+		}
+	}
+}
+
+.sub-info {
+	margin: 25px 0px 15px;
+}
+
+.subtitle-content {
+	font-family: $font-2;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: $red-1;
+	line-height: 1.4em;
+}
+
+.as {
+	font-weight: normal;
+}
+
+.date {
+	font-size: 12px;
+	font-style: italic;
+}
+
+.ul-list {
+	margin: 20px 0px 5px 20px;
+}
+
+.desc-content {
+	display: block;
+	margin: 8px 0px 15px;
+}
+
+.tag {
+	display: inline-block;
+	margin: 2px;
+	padding: 5px;
+	background-color: $red-1;
+	font-size: 12px;
+}
+
+.label {
+	display: block;
+	margin: 25px 0px 10px;
+
+	.info-label {
+		padding: 2px 0px 2px;
+		line-height: 1.4em;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+}
+
+.img-page {
+	width: 100%;
+	margin: 20px 0px 20px;
+
+	img {
+		width: inherit;
+		height: inherit;
+	}
+}
+
+.site {
+	padding-top: 20px;
+
+	a {
+		display: inline-block;
+		background-color: $red-1;
+		border: 2px solid $red-1;
+		color: $red-1;
+		text-decoration: none;
+		padding: 12px 20px 12px;
+		font-family: $font-2;
+		@include transition((background-color .3s ease-in-out));
+
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: darken($red-1, 20);
+			border-color: darken($red-1, 20);
+		}
+
+		&:hover span,
+		&:active span,
+		&:focus span {
+			&::before {
+				left: 0px;
+				opacity: 1;
+			}
+		}
+	}
+
+	span {
+		color: $white-1;
+
+		&::before {
+			content: "";
+			height: 2px;
+			margin-left: -4px;
+			margin-right: -4px;
+			display: block;
+			background-color: $white-1;
+			position: relative;
+			bottom: -12px;
+			left: -14px;
+			opacity: 0;
+			@include transition((opacity .4s, left .4s cubic-bezier(0.93, 0.05, 0, 0.8)));
+		}
+	}
+}
+
+@include responsive (medium) {
+	.title-content {
+		font-size: 24px;
+
+		&.divider {
+			&::after {
+				width: 120px;
+			}
+		}
+	}
+}

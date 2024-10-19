@@ -1,0 +1,92 @@
+//========= Mixin ============
+@mixin transform($method) {
+    transform: $method;
+    -webkit-transform: $method;
+    -moz-transform: $method;
+    -ms-transform: $method;
+    -o-transform: $method;
+}
+
+@mixin transition($method) {
+    transition: $method;
+    -webkit-transition: $method;
+    -moz-transition: $method;
+    -ms-transition: $method;
+    -o-transition: $method;
+}
+
+@mixin animation($method) {
+    animation: $method;
+    -webkit-animation: $method;
+    -moz-animation: $method;
+    -ms-animation: $method;
+    -o-animation: $method;
+}
+
+@mixin background-size($method) {
+    background-size: $method;
+    -webkit-background-size: $method;
+    -moz-background-size: $method;
+    -ms-background-size: $method;
+    -o-background-size: $method;
+}
+
+@mixin keyframes($param) {
+    @-webkit-keyframes #{$param} {
+        @content;
+    }
+
+    @-moz-keyframes #{$param} {
+        @content;
+    }
+
+    @-ms-keyframes #{$param} {
+        @content;
+    }
+
+    @keyframes #{$param} {
+        @content;
+    }
+}
+
+// ========= Media Query (bootstrap 4 breakpoint method) ============
+// layout size
+$sm-layout: 576px;
+$md-layout: 768px;
+$lg-layout: 992px;
+$xl-layout: 1200px;
+
+// mobile first method
+@mixin responsive($layout) {
+    @if $layout =='small'
+
+        {
+        @media (min-width: $sm-layout) {
+            @content;
+        }
+    }
+
+    @else if $layout =='medium'
+
+        {
+        @media (min-width: $md-layout) {
+            @content;
+        }
+    }
+
+    @else if $layout =='large'
+
+        {
+        @media (min-width: $lg-layout) {
+            @content;
+        }
+    }
+
+    @else if $layout =='extra-large'
+
+        {
+        @media (min-width: $xl-layout) {
+            @content;
+        }
+    }
+}
