@@ -1,0 +1,17 @@
+{
+  "name": "webtemplate",
+  "version": "1.0.0",
+  "description": "A custom-built personal website using a raw approach, with no frameworks or libraries.",
+  "main": "index.js",
+  "scripts": {
+    "compile-scss": "sass --no-source-map --style=compressed assets/scss:assets/css",
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "sass": "^1.80.3"
+  }
+}
